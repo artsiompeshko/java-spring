@@ -5,12 +5,13 @@ import com.apeshko.javaspring.model.Ticket;
 import com.apeshko.javaspring.storage.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-@Component
+@Repository
 public class TicketDaoImpl implements TicketDao<Ticket> {
     private static final String STORAGE_PREFIX = "ticket";
     private Storage storage;
